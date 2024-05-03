@@ -23,10 +23,7 @@ try:
 except ImportError:
     tensorboard = None
 
-try:
-    import horovod.torch as hvd
-except ImportError:
-    hvd = None
+hvd = None
 
 from open_clip import create_model_and_transforms, trace_model, get_tokenizer, create_loss
 from training.data import get_data

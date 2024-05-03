@@ -3,10 +3,7 @@ import os
 import torch
 import torch.distributed as dist
 
-try:
-    import horovod.torch as hvd
-except ImportError:
-    hvd = None
+hvd = None
 
 
 def is_global_master(args):
